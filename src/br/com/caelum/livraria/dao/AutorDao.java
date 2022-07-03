@@ -17,6 +17,7 @@ import br.com.caelum.livraria.modelo.Autor;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER) // opcional
+//@Interceptors({LogInterceptador.class})
 public class AutorDao {
 
 //	No EJB a anotação de injeção do EntityManager é @PersistenceContext
@@ -30,15 +31,16 @@ public class AutorDao {
 
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public void salva(Autor autor) {
+
 		System.out.println("Salvando Autor " + autor.getNome());
 
 		manager.persist(autor);
-		
+
 		System.out.println("Salvou Autor " + autor.getNome());
-		
+
 //		Chamada ao serviço externo que gera um erro...
 //		throw new RuntimeException("Serviço externo deu erro!");
-		
+
 	}
 
 	public List<Autor> todosAutores() {

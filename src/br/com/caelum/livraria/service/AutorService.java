@@ -20,7 +20,7 @@ public class AutorService {
 		dao.salva(autor);
 		
 //		Uma regra de negócio deu errado
-		throw new LivrariaException();
+//		throw new LivrariaException();
 	}
 
 	public List<Autor> todosAutores() {
