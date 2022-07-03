@@ -18,6 +18,9 @@ public class AutorService {
 	public void adiciona(Autor autor) {
 		
 		dao.salva(autor);
+		
+//		Uma regra de negócio deu errado
+		throw new LivrariaException();
 	}
 
 	public List<Autor> todosAutores() {

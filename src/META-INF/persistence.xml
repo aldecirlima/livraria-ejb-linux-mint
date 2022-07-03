@@ -8,7 +8,7 @@
 	
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		
-		<jta-data-source>java:/livrariaEJB</jta-data-source>
+		<jta-data-source>java:jboss/datasources/livrariaDS</jta-data-source>
 
 		<class>br.com.caelum.livraria.modelo.Autor</class>
 		<class>br.com.caelum.livraria.modelo.Livro</class>
